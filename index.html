@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kuddel &amp; Maren — Getränkekarte</title>
+  <meta name="description" content="Die Getränkekarte zur großen Feier: Kuddel wird 50, 16. Hochzeitstag & 30 Jahre Maren und Kuddel. Prost! 🍹" />
+  <meta name="theme-color" content="#0d0221" />
+
+  <!-- Open Graph (hübsche Vorschau beim Teilen via WhatsApp etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kuddel &amp; Maren — Getränkekarte 🍹" />
+  <meta property="og:description" content="Kuddel wird 50 · 16. Hochzeitstag · 30 Jahre zusammen. Scann dich rein und such dir was aus!" />
+  <meta property="og:url" content="https://kuddel-maren.die-beaus.de" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- animierter Synthwave-Hintergrund (rein per CSS) -->
+  <div class="scene" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="grid"></div>
+    <div class="stars"></div>
+  </div>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <header class="hero">
+    <p class="hero__eyebrow">Wir feiern!</p>
+    <h1 class="hero__title">
+      <span class="hero__name">Kuddel</span>
+      <span class="hero__amp">&amp;</span>
+      <span class="hero__name hero__name--alt">Maren</span>
+    </h1>
+    <ul class="hero__occasions">
+      <li><span class="badge badge--pink">🎉 Kuddel wird 50</span></li>
+      <li><span class="badge badge--cyan">💍 16. Hochzeitstag</span></li>
+      <li><span class="badge badge--gold">💜 30 Jahre zusammen</span></li>
+    </ul>
+    <p class="hero__cta">Such dir was Schönes aus der Bar 👇</p>
+  </header>
+
+  <nav class="catnav" id="catnav" aria-label="Getränkekategorien">
+    <div class="catnav__track" id="catnav-track"><!-- Chips per JS --></div>
+  </nav>
+
+  <main id="menu"><!-- Kategorien per JS --></main>
+
+  <footer class="footer">
+    <p>🥂 Prost auf Kuddel &amp; Maren — bitte trinkt verantwortungsvoll.</p>
+    <p class="footer__small">kuddel-maren.die-beaus.de</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

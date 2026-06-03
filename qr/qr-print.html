@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR-Aufsteller — Kuddel &amp; Maren</title>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d0221; --pink: #ff2e97; --cyan: #16e0ff; --magenta: #c026ff; --gold: #ffd166;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: #2a0b4e;
+      font-family: "Orbitron", system-ui, sans-serif;
+      color: #f3e9ff;
+      display: flex;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    /* A6-Karte (105 × 148 mm) */
+    .card {
+      width: 105mm;
+      height: 148mm;
+      background:
+        radial-gradient(120% 70% at 50% 0%, #2a0b4e 0%, #190933 50%, #0d0221 100%);
+      border-radius: 10mm;
+      border: 2px solid var(--pink);
+      box-shadow: 0 0 30px rgba(255, 46, 151, 0.6), inset 0 0 30px rgba(192, 38, 255, 0.25);
+      padding: 9mm 7mm;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.35em; text-transform: uppercase; font-size: 10pt;
+      color: var(--cyan); text-shadow: 0 0 8px var(--cyan); margin: 0; padding-left: 0.35em;
+    }
+    .title {
+      font-family: "Monoton", cursive; font-weight: 400; font-size: 30pt; line-height: 1; margin: 4mm 0 0;
+      color: #fff; text-shadow: 0 0 6px #fff, 0 0 16px var(--pink), 0 0 30px var(--pink);
+    }
+    .occasions { font-size: 9.5pt; color: var(--gold); text-shadow: 0 0 8px rgba(255,209,102,.6); margin: 3mm 0 0; }
+
+    .qrwrap {
+      background: #fff;
+      padding: 5mm;
+      border-radius: 6mm;
+      box-shadow: 0 0 22px rgba(22, 224, 255, 0.7);
+    }
+    .qrwrap img { display: block; width: 52mm; height: 52mm; }
+
+    .scan { font-size: 13pt; font-weight: 700; margin: 0; color: #fff; text-shadow: 0 0 10px var(--cyan); }
+    .url  { font-size: 9pt; letter-spacing: 0.12em; color: var(--cyan); margin: 2mm 0 0; }
+
+    @media print {
+      @page { size: A6; margin: 0; }
+      body { background: #fff; padding: 0; }
+      .card { border-radius: 0; width: 105mm; height: 148mm; }
+      .no-print { display: none; }
+    }
+    .no-print {
+      position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+      background: var(--pink); color: #0d0221; border: none; border-radius: 999px;
+      padding: 10px 20px; font-family: inherit; font-weight: 700; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div>
+      <p class="eyebrow">Wir feiern!</p>
+      <h1 class="title">Kuddel<br>&amp; Maren</h1>
+      <p class="occasions">🎉 50 · 💍 16. Hochzeitstag · 💜 30 Jahre</p>
+    </div>
+
+    <p class="scan">🍹 Scan mich für<br>die Getränkekarte</p>
+
+    <div class="qrwrap">
+      <img src="kuddel-qr.svg" alt="QR-Code zur Getränkekarte" />
+    </div>
+
+    <p class="url">kuddel-maren.die-beaus.de</p>
+  </div>
+
+  <button class="no-print" onclick="window.print()">🖨️ Drucken / als PDF speichern</button>
+</body>
+</html>

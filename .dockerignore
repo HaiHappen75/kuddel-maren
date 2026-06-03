@@ -1,0 +1,7 @@
+.git
+.gitignore
+README.md
+Getraenkeliste.md
+qr/generate-qr.sh
+**/.DS_Store
+*.pdf
