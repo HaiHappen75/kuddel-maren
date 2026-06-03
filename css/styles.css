@@ -230,6 +230,11 @@ body {
 }
 .catnav__track::-webkit-scrollbar { display: none; }
 
+/* Chips zentrieren, wenn sie passen — sonst sauber von links scrollbar.
+   Auto-Margins teilen freien Platz auf; bei Überlauf kollabieren sie auf 0. */
+.catnav__track > .chip:first-child { margin-inline-start: auto; }
+.catnav__track > .chip:last-child  { margin-inline-end: auto; }
+
 .chip {
   flex: 0 0 auto;
   scroll-snap-align: center;
