@@ -149,6 +149,7 @@ body {
 .hero__name {
   display: inline-block;
   max-width: 100%;
+  text-transform: uppercase;
   color: #fff;
   text-shadow:
     0 0 6px #fff,
